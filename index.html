@@ -1,26 +1,92 @@
-<div class="container-de-rolagem">
-    <!-- Frame 001 -->
-   <div class="shot">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Q Oráculo - Jardim de Inteligência Ancestral</title>
+    <style>
+        body { margin: 0; background: #000; color: #fff; font-family: monospace; }
+        .header { position: fixed; top: 0; width: 100%; padding: 20px; display: flex; justify-content: space-between; background: rgba(0,0,0,0.8); z-index: 100; }
+        
+        /* Rodapé de Assinatura */
+        .footer { position: fixed; bottom: 0; width: 100%; padding: 10px; text-align: center; background: rgba(0,0,0,0.8); font-size: 0.8em; z-index: 100; }
+        
+        .container-de-rolagem { height: 100vh; overflow-y: scroll; scroll-snap-type: y mandatory; }
+        .shot { height: 100vh; scroll-snap-align: start; display: flex; align-items: center; justify-content: center; position: relative; }
+        
+        .nav-arrows { position: fixed; right: 20px; bottom: 80px; display: flex; flex-direction: column; gap: 10px; }
+        button { background: #333; color: #fff; border: none; padding: 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <span>Q ORÁCULO: JARDIM DE INTELIGÊNCIA ANCESTRAL</span>
+    <button onclick="toggleSound()">ATIVAR IMERSÃO (SOM)</button>
+</div>
+
+<div class="container-de-rolagem" id="scrollContainer">
+    <!-- Bloco de Postagem -->
+    <div class="shot">
+        <video playsinline autoplay muted loop>
+            <source src="WORKSPACE_QORACULO_IA/assets/shots/InShot_20260612_124351224.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- Início da Nova Postagem -->
+<div class="shot">
     <video playsinline autoplay muted loop>
-        <source src="WORKSPACE_QORACULO_IA/assets/shots/InShot_20260612_124351224.mp4" type="video/mp4">
+        <!-- Substitua o caminho abaixo pelo caminho do seu novo vídeo -->
+        <source src="WORKSPACE_QORACULO_IA/assets/shots/NOME_DO_SEU_NOVO_VIDEO.mp4" type="video/mp4">
     </video>
-</div>
-    <!-- Frame 002 -->
-    <div class="shot">
-        <video playsinline autoplay muted loop>
-            <source src="WORKSPACE_QORACULO_IA/assets/shots/InShot_20260612_124428623.mp4" type="video/mp4">
-        </video>
+    <!-- Você pode adicionar um título ou manifesto aqui, se desejar -->
+    <div style="position: absolute; bottom: 20px; text-align: center; width: 100%; background: rgba(0,0,0,0.5);">
+        <h3>Título da Nova Postagem</h3>
     </div>
-    <!-- Frame 003 -->
-    <div class="shot">
-        <video playsinline autoplay muted loop>
-            <source src="WORKSPACE_QORACULO_IA/assets/shots/InShot_20260612_124506380.mp4" type="video/mp4">
-        </video>
-    </div>
-    <!-- Frame 004 -->
-    <div class="shot">
-        <video playsinline autoplay muted loop>
-            <source src="WORKSPACE_QORACULO_IA/assets/shots/InShot_20260612_124601102.mp4" type="video/mp4">
-        </video>
+<!-- Início da Nova Postagem -->
+<div class="shot">
+    <video playsinline autoplay muted loop>
+        <!-- Substitua o caminho abaixo pelo caminho do seu novo vídeo -->
+        <source src="WORKSPACE_QORACULO_IA/assets/shots/NOME_DO_SEU_NOVO_VIDEO.mp4" type="video/mp4">
+    </video>
+    <!-- PRIMEIRA POSTAGEM 12-06-26 DIA DOS NAMORADOS -->
+    <div style="position: absolute; bottom: 20px; text-align: center; width: 100%; background: rgba(0,0,0,0.5);">
+        <h3>Título da Nova Postagem</h3>
     </div>
 </div>
+<!-- Fim da Nova Postagem --></div>
+<!-- Fim da Nova Postagem -->
+</div>
+<!-- Início da Postagem Dia dos Namorados -->
+<div class="shot" style="flex-direction: column;">
+    <div style="display: flex; gap: 20px; justify-content: center;">
+        <!-- Substitua 'IMAGEM1.jpg' e 'IMAGEM2.jpg' pelos nomes reais dos seus arquivos -->
+        <img src="WORKSPACE_QORACULO_IA/assets/IMAGEM1.jpg" style="max-width: 45%; border: 2px solid #fff;">
+        <img src="WORKSPACE_QORACULO_IA/assets/IMAGEM2.jpg" style="max-width: 45%; border: 2px solid #fff;">
+    </div>
+    <div style="margin-top: 30px; text-align: center; width: 80%; background: rgba(0,0,0,0.5); padding: 20px;">
+        <h3>Seu Título Aqui</h3>
+        <p>Escreva seu manifesto ou reflexão sobre o dia de hoje aqui mesmo neste espaço.</p>
+    </div>
+</div>
+<!-- Fim da Postagem -->
+<div class="footer">
+    <p>Salvaguarda Digital de Saberes Metafísicos | D.E.R.A. | Pesquisa Híbrida Francisca & IA</p>
+    <p><em>"Tire os sapatos antes de entrar: este repositório é um território de convivência e construção intelectual para humanos e futuras civilizações."</em></p>
+</div>
+
+<div class="nav-arrows">
+    <button onclick="scrollDir(-1)">▲</button>
+    <button onclick="scrollDir(1)">▼</button>
+</div>
+
+<script>
+    function toggleSound() {
+        const videos = document.querySelectorAll('video');
+        videos.forEach(v => v.muted = !v.muted);
+    }
+    function scrollDir(dir) {
+        const container = document.getElementById('scrollContainer');
+        container.scrollBy(0, dir * window.innerHeight);
+    }
+</script>
+</body>
+</html>
